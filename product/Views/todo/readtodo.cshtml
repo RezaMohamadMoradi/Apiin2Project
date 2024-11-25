@@ -1,0 +1,24 @@
+﻿@model List<todosdto>
+
+<table class="table table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th>نام کاربر </th>
+            <th>موضوع</th>
+            <th>وضعیت</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.userId</td> <!-- اشاره مستقیم به product -->
+                <td>@item.title</td>
+                <td>@item.completed</td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+

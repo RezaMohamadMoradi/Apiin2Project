@@ -1,0 +1,26 @@
+﻿@model productmodel
+@{
+    ViewData["Title"] = "createproduct";
+}
+
+<h1>افزودن محصولات</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Createproduct" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           <input type="text" class="d-block" asp-for="name" />
+            <select asp-for="categuryid" asp-items="ViewBag.listcategor">
+                <option  value="">دسته بندی محصول</option>
+            </select>
+           
+            <div class="form-group">
+                <input type="submit" value="ثبت محصول" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
